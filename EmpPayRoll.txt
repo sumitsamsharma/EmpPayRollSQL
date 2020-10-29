@@ -1,3 +1,8 @@
+create table Test(id integer, title varchar(100));
+insert into Test(id, title) values(1, "Hello");
+select * from Test;
+-- Your code here!
+
 create database payroll_service; 
 show databases;
 use payroll_service;
@@ -39,12 +44,32 @@ ALTER TABLE EmpPayRoll ADD phone_no VARCHAR(100) After Name;
 ALTER TABLE EmpPayRoll ADD Address VARCHAR(100) After phone_no;
 ALTER TABLE EmpPayRoll ADD Department VARCHAR(100) NOT NULL After Address;
 ALTER TABLE EmpPayRoll ALTER Address SET default 'TBD';
-
 ALTER TABLE EmpPayRoll RENAME COLUMN salary to basic_pay;
 ALTER TABLE EmpPayRoll ADD Deductions Double NOT NULL After basic_pay;
 ALTER TABLE EmpPayRoll ADD taxable_pay Double NOT NULL After Deductions;
 ALTER TABLE EmpPayRoll ADD income_tax double NOT NULL After taxable_pay;
 ALTER TABLE EmpPayRoll ADD net_pay double NOT NULL After income_tax;
+
+CREATE TABLE Dept (
+    id INT unsigned NOT NULL,
+    dept_name varchar(255) NOT NULL,
+	dept_id double NOT NULL,
+    primary key(dept_id),
+    foreign key(dept_id) references EmpPayRoll(id)
+    );
+
+
+INSERT INTO EmpPayRoll (Name, phone_no,Address,Department,Gender,basic_pay,Deductions,taxable_pay,income_tax,net_pay,start)
+VALUES ('Alysse','9988998899','Michigan B-21','HR','F',0,0,0,0,0,'2018-04-19');
+
+
+
+INSERT INTO EmpPayRoll (Name, phone_no,Address,Department,Gender,basic_pay,Deductions,taxable_pay,income_tax,net_pay,start)
+VALUES ('Alysse','9988998899','Michigan B-21','IT','F',18000000.0,2000.0,1100010.0,6780.0,6780.0,'2018-03-12');
+
+
+Select * from EmpPayRoll; 
+
 
 
 
