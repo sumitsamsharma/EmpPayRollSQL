@@ -40,6 +40,11 @@ ALTER TABLE EmpPayRoll ADD Address VARCHAR(100) After phone_no;
 ALTER TABLE EmpPayRoll ADD Department VARCHAR(100) NOT NULL After Address;
 ALTER TABLE EmpPayRoll ALTER Address SET default 'TBD';
 
- 
+ALTER TABLE EmpPayRoll RENAME COLUMN salary to basic_pay;
+ALTER TABLE EmpPayRoll ADD Deductions Double NOT NULL After basic_pay;
+ALTER TABLE EmpPayRoll ADD taxable_pay Double NOT NULL After Deductions;
+ALTER TABLE EmpPayRoll ADD income_tax double NOT NULL After taxable_pay;
+ALTER TABLE EmpPayRoll ADD net_pay double NOT NULL After income_tax;
+
 
 
