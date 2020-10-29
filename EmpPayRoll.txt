@@ -1,3 +1,10 @@
 create database payroll_service; 
 show databases;
 use payroll_service;
+CREATE TABLE EmpPayRoll (
+    id INT unsigned NOT NULL auto_increment,
+    Name varchar(255) NOT NULL,
+	salary double NOT NULL,
+    start DATE NOT NULL,
+    primary key(id)
+    );
