@@ -25,7 +25,18 @@ where name='Dhoni';
 ALTER TABLE EmpPayRoll
 ADD Gender char(1) after Name;
   
-update EmpPayRoll set Gender='M' 
-WHERE Name='Sehwag' or Name='Dhoni' or Name='Ganguly'; 
+update EmpPayRoll set Gender=
+'M' WHERE Name='Sehwag' or Name='Dhoni' or Name='Ganguly'; 
  
 Select * from EmpPayRoll; 
+
+SELECT SUM(salary)
+FROM EmpPayRoll
+where Gender='M'
+GROUP BY Gender;
+
+
+
+ 
+
+
