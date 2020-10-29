@@ -8,3 +8,15 @@ CREATE TABLE EmpPayRoll (
     start DATE NOT NULL,
     primary key(id)
     );
+INSERT INTO EmpPayRoll (id, Name, salary, start)
+VALUES ('Dhoni',1000000.0,'2018-02-01');    
+
+INSERT INTO EmpPayRoll (id, Name, salary, start)
+VALUES ('Sehwag',200000.0,'2018-03-21');
+
+INSERT INTO EmpPayRoll (id, Name, salary, start)
+VALUES ('Ganguly',800000.0,'2018-04-19');
+    
+    
+    
+    
