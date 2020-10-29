@@ -63,9 +63,18 @@ INSERT INTO EmpPayRoll (Name, phone_no,Address,Department,Gender,basic_pay,Deduc
 VALUES ('Alysse','9988998899','Michigan B-21','HR','F',0,0,0,0,0,'2018-04-19');
 
 
-
 INSERT INTO EmpPayRoll (Name, phone_no,Address,Department,Gender,basic_pay,Deductions,taxable_pay,income_tax,net_pay,start)
 VALUES ('Alysse','9988998899','Michigan B-21','IT','F',18000000.0,2000.0,1100010.0,6780.0,6780.0,'2018-03-12');
+
+SELECT COUNT(Gender)
+FROM EmpPayRoll
+where Gender='F'
+GROUP BY Gender;
+
+SELECT COUNT(Gender)
+FROM EmpPayRoll
+where Gender='M'
+GROUP BY Gender;
 
 
 Select * from EmpPayRoll; 
