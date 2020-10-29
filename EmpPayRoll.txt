@@ -21,4 +21,11 @@ Select * from EmpPayRoll;
 
 Select salary from EmpPayRoll
 where name='Dhoni';    
-    
+
+ALTER TABLE EmpPayRoll
+ADD Gender char(1) after Name;
+  
+update EmpPayRoll set Gender='M' 
+WHERE Name='Sehwag' or Name='Dhoni' or Name='Ganguly'; 
+ 
+Select * from EmpPayRoll; 
