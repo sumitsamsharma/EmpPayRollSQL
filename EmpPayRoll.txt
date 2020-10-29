@@ -18,5 +18,7 @@ INSERT INTO EmpPayRoll (Name, salary, start)
 VALUES ('Ganguly',800000.0,'2018-04-19');
     
 Select * from EmpPayRoll;    
-    
+
+Select salary from EmpPayRoll
+where name='Dhoni';    
     
