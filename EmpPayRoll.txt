@@ -1,5 +1,4 @@
 
-
 create database payroll_service; 
 show databases;
 use payroll_service;
@@ -72,6 +71,9 @@ SELECT COUNT(Gender)
 FROM EmpPayRoll
 where Gender='M'
 GROUP BY Gender;
+
+Select basic_pay from EmpPayRoll
+where start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());    
 
 
 Select * from EmpPayRoll; 
