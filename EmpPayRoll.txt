@@ -35,7 +35,10 @@ FROM EmpPayRoll
 where Gender='M'
 GROUP BY Gender;
 
-
+ALTER TABLE EmpPayRoll ADD phone_no VARCHAR(100) After Name;
+ALTER TABLE EmpPayRoll ADD Address VARCHAR(100) After phone_no;
+ALTER TABLE EmpPayRoll ADD Department VARCHAR(100) NOT NULL After Address;
+ALTER TABLE EmpPayRoll ALTER Address SET default 'TBD';
 
  
 
